@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
+    let realm = try! Realm()
+    let data = Grades()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        data.name = "Tosh"
+        data.score = 100
+        data.grade = "A"
+        
+        try! realm.write {
+            realm.add(data)
+        }
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 
 
