@@ -22,9 +22,10 @@ class ViewController: UIViewController {
         data.score = 100
         data.grade = "A"
         
-//        try! realm.write 
-//            realm.add(data)
-//        }
+        try! realm.write{
+            realm.add(data)
+        }
+    
         let folderPath = realm.configuration.fileURL!.deletingLastPathComponent().path
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)
