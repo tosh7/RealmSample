@@ -29,6 +29,6 @@ class SecondViewController: UIViewController {
         scoreLabel.text = String(gradesDataArray[0].score)
         gradeLabel.text = gradesDataArray[0].grade
         
-        print("here")
+        print("here2")
     }
 }
