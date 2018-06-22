@@ -26,6 +26,14 @@
                                     <segue destination="EOU-ba-TCV" kind="presentation" id="Lqj-Wx-aWQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8h-7z-TDF">
+                                <rect key="frame" x="164" y="431" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="addRealm" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWy-uj-KU3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,6 +72,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Bn-Wg-fQz">
+                                <rect key="frame" x="67" y="401" width="240" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lxo-Jx-Sff"/>
@@ -71,6 +83,7 @@
                     <connections>
                         <outlet property="gradeLabel" destination="chT-uq-i8v" id="fIH-nf-KUt"/>
                         <outlet property="nameLabel" destination="W6b-2q-eee" id="x8d-f4-rUx"/>
+                        <outlet property="pic" destination="7Bn-Wg-fQz" id="TLw-nK-WBa"/>
                         <outlet property="scoreLabel" destination="eSZ-0N-9yS" id="K9m-QA-Qq8"/>
                     </connections>
                 </viewController>

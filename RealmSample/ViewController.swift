@@ -18,9 +18,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        data.name = "Tosh"
-        data.score = 100
-        data.grade = "A"
+        let url = URL(string: "https://cover.openbd.jp/9784091898494.jpg")
+        let imageData = try?Data(contentsOf: url!)
+        
+        data.name = "Satoshi"
+        data.score = 80
+        data.grade = "B"
+        data.image = imageData!
         
         try! realm.write{
             realm.add(data)
@@ -28,8 +32,14 @@ class ViewController: UIViewController {
     
         let folderPath = realm.configuration.fileURL!.deletingLastPathComponent().path
         
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+//        print(Realm.Configuration.defaultConfiguration.fileURL!)
         print(folderPath)
+    }
+    
+    @IBAction func addRealm() {
+        try! realm.write{
+            realm.add(data)
+        }
     }
 
 
